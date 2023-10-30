@@ -10,7 +10,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-const persistConfig = { key: 'root', storage, blacklist:[], version: 1}
+const persistConfig = { key: 'root', storage, blacklist:['images'], version: 1}
 const persistedReducer = persistReducer(persistConfig, imageReducer)
 
 const store = configureStore({
